@@ -161,6 +161,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: white;
   font-size: 3rem;
   transform: rotate(90deg);
@@ -171,6 +172,7 @@
   border-radius: 50%;
   position: absolute;
   top: 50%;
+  cursor: pointer;
   right: 3%;
   display: flex;
   align-items: center;
@@ -352,10 +354,9 @@
   font-weight: 500;
 }
 
-.subscribe > div div:nth-of-type(1)
-{
+.subscribe > div div:nth-of-type(1) {
   color: rgb(211, 36, 36);
-  margin: .6rem 0;
+  margin: 0.6rem 0;
 }
 
 .subscribe > div {
@@ -366,28 +367,27 @@
   justify-content: center;
 }
 
-.subscribe-input{
+.subscribe-input {
   flex-direction: row !important;
   width: 100%;
   margin: auto;
 }
 
-.subscribe-input input{
-  padding: .6rem 10rem;
+.subscribe-input input {
+  padding: 0.6rem 10rem;
   border-radius: 25px;
-  outline:none;
+  outline: none;
   border: 1px solid grey;
   background-color: transparent;
   position: relative;
 }
 
-.subscribe-input button{
-padding: .6rem 1rem;
-border-radius: 50%;
-background: rgb(219, 29, 29);
-outline: none;
-border: none;
-color: white;
-transform: translateX(-101%) rotate(-90deg);
+.subscribe-input button {
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  background: rgb(219, 29, 29);
+  outline: none;
+  border: none;
+  color: white;
+  transform: translateX(-101%) rotate(-90deg);
 }
-

@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <div className="footer-middle"></div>
       <div className="footer-lower">
-        <h1>Copyright © 2017 MassTechnologist.Com. All Rights Reserved</h1>
+        <h1>Copyright © lorem lorem lorem . All Rights Reserved</h1>
         <h2>Lorem, ipsum dolor.</h2>
         <h3>Lorem ipsum dolor sit.</h3>
       </div>

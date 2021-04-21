@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Comments from "./Comments";
 import "../Styles/homecontent.css";
 import Nav from "./Nav";
@@ -9,7 +9,55 @@ import FeaturedCards from "./FeaturedCards";
 import OurProductsCard from "./OurproductsCard";
 import { AnimatePresence, motion } from "framer-motion";
 export default function HomeContent() {
+  const [transform, settransform] = useState(0);
+  const increment = () => {
+    settransform(transform + 25);
+  };
+  const decrement = () => {
+    settransform(transform - 25);
+  };
+  if (transform < 0 || transform > 100) {
+    settransform(0);
+  }
+  const [transform1, settransform1] = useState(0);
+  const increment1 = () => {
+    settransform1(transform1 + 25);
+  };
+  const decrement1 = () => {
+    settransform1(transform1 - 25);
+  };
+  if (transform1 < 0 || transform1 > 100) {
+    settransform1(0);
+  }
+  useEffect(() => {
+    var homeContentCard = document.querySelectorAll(".featuredcards");
+    var ourproductcards = document.querySelectorAll(".ourproductcards");
+    var a = document.querySelectorAll(".scrollbutton");
+    var b = document.querySelectorAll(".scrollbutton1");
+    a[0].addEventListener("click", () => {
+      homeContentCard.forEach((event) => {
+        event.style.transform = `translateX(-${transform}rem) `;
+      });
+    });
+    b[0].addEventListener("click", () => {
+      homeContentCard.forEach((event) => {
+        event.style.transform = `translateX(-${transform}rem)`;
+      });
+    });
+    a[1].addEventListener("click", () => {
+      ourproductcards.forEach((event) => {
+        event.style.transform = `translateX(-${transform1}rem) `;
+      });
+    });
+    b[1].addEventListener("click", () => {
+      ourproductcards.forEach((event) => {
+        event.style.transform = `translateX(-${transform1}rem)`;
+      });
+    });
+  }, [transform, transform1]);
+
   return (
+
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -59,7 +107,9 @@ export default function HomeContent() {
           </div>
           <div className="heading-lines2"></div>
         </div>
-        <div className="scrollbutton">v</div>
+        <div onClick={decrement} className="scrollbutton">
+          v
+        </div>
         <div className="featured-product-cards">
           <FeaturedCards />
           <FeaturedCards />
@@ -69,7 +119,9 @@ export default function HomeContent() {
           <FeaturedCards />
           <FeaturedCards />
         </div>
-        <div className="scrollbutton1">v</div>
+        <div onClick={increment} className="scrollbutton1">
+          v
+        </div>
       </div>
       <Comments />
       <div className="featured-product">
@@ -80,7 +132,9 @@ export default function HomeContent() {
           </div>
           <div className="heading-lines2"></div>
         </div>
-        <div className="scrollbutton">v</div>
+        <div onClick={decrement1} className="scrollbutton">
+          v
+        </div>
         <div className="featured-product-cards">
           <OurProductsCard />
           <OurProductsCard />
@@ -88,8 +142,11 @@ export default function HomeContent() {
           <OurProductsCard />
           <OurProductsCard />
           <OurProductsCard />
+          <OurProductsCard />
         </div>
-        <div className="scrollbutton1">v</div>
+        <div onClick={increment1} className="scrollbutton1">
+          v
+        </div>
       </div>
       <div className="newarrivals-bestsellers">
         <div className="newarrivals">

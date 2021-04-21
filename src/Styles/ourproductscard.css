@@ -4,6 +4,7 @@
     margin: 0 2rem;
     border-radius: 25px;
     border: 3px solid rgb(43, 43, 43);
+    transition: all .3s ease-in-out;
   }
   
   .ourproduct-img {

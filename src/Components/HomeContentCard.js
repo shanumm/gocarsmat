@@ -1,5 +1,5 @@
-import React from "react";
-import "../Styles/homecontentcard.css"
+import React, { useEffect } from "react";
+import "../Styles/homecontentcard.css";
 export default function HomeContentCard(props) {
   return (
     <div className="homecontentcard">
