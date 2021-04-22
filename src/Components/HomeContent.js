@@ -9,7 +9,7 @@ import FeaturedCards from "./FeaturedCards";
 import OurProductsCard from "./OurproductsCard";
 import { AnimatePresence, motion } from "framer-motion";
 export default function HomeContent() {
-  const [transform, settransform] = useState(0);
+  const [transform, settransform] = useState(0);     
   const increment = () => {
     settransform(transform + 25);
   };
