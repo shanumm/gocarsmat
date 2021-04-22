@@ -1,63 +1,296 @@
-.image-corousel {
-  height: 90vh;
+/* ==== Main CSS === */
+.img-fill {
+  width: 100%;
+  display: block;
+  overflow: hidden;
   position: relative;
+  text-align: center;
 }
 
-.image-corousel-img:nth-of-type(1) {
-  height: 100%;
-  width: 100%;
-  background: url("https://cdn.pixabay.com/photo/2016/11/22/23/44/porsche-1851246_960_720.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.img-fill img {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  display: inline-block;
+  max-width: none;
+}
+/* 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+} */
+
+.Grid1k {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blocks-box,
+.slick-slider {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.slick-slide {
+  float: left /* If RTL Make This Right */;
+  padding: 0;
+}
+
+/* ==== Slider Style === */
+.Modern-Slider .item .img-fill {
+  height: 90vh;
+  background: #000;
+}
+
+.Modern-Slider .item .img-fill .info {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 100vh;
+  text-align: center;
+}
+
+.Modern-Slider .item .img-fill img {
+  filter: blur(1px);
+}
+
+.Modern-Slider .item .info > div {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.Modern-Slider .NextArrow {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  margin-top: -22.5px;
+  text-align: center;
+  font: 20px/45px FontAwesome;
+  color: #fff;
+  z-index: 5;
+}
+
+.Modern-Slider .NextArrow:before {
+  content: "\f105";
+}
+
+.Modern-Slider .PrevArrow {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0 none;
+  margin-top: -22.5px;
+  text-align: center;
+  font: 20px/45px FontAwesome;
+  color: #fff;
+  z-index: 5;
+}
+
+.Modern-Slider .PrevArrow:before {
+  content: "\f104";
+}
+
+.Modern-Slider .slick-dots {
+  position: absolute;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.Modern-Slider .slick-dots li button {
+  display: none;
+}
+.Modern-Slider .slick-dots li {
+  float: left;
+  width: 0px;
+  height: 5px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.Modern-Slider .slick-dots li.slick-active {
+  width: 100%;
+  transition: width 11s linear;
+}
+
+.Modern-Slider .item h3 {
+  font: 28px/55px RalewayB;
+  text-transform: uppercase;
+  color: #fff;
+  animation: fadeOutRight 1s both;
+}
+
+.Modern-Slider .item h5 {
+  font: 20px/30px RalewayR;
+  color: #fff;
+  max-width: 600px;
+  overflow: hidden;
+  height: 30px;
+  animation: fadeOutLeft 1s both;
+}
+
+.Modern-Slider .item.slick-active h3 {
+  animation: fadeInDown 1s both 1s;
+}
+
+.Modern-Slider .item.slick-active h5 {
+  animation: fadeInLeft 1s both 1.5s;
+}
+
+.Modern-Slider .item .img-fill img {
+  transform: scale(0) rotate(0deg);
+  animation: Slide-RotateSOut 1s both;
+}
+
+.Modern-Slider .slick-active .img-fill img {
+  transform: scale(1) rotate(360deg);
+  animation: Slide-RotateSIn 1s both;
+}
+
+/* ==== Slider Transition === */
+@-webkit-keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes Slide-RotateSIn {
+  from {
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes Slide-RotateSIn {
+  from {
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+  }
+}
+@-webkit-keyframes Slide-RotateSOut {
+  from {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+  }
+  to {
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
+  }
+}
+@keyframes Slide-RotateSOut {
+  from {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+  }
+  to {
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
+  }
+}
+
+/* ==== Slick Slider Css Ruls === */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
   top: 0;
   left: 0;
+  display: block;
 }
-.image-corousel-img:nth-of-type(2) {
-  transform: scale(1.1);
-  position: absolute;
-  z-index: 5;
-  bottom: 2%;
-  right: 10%;
-  width: 15rem;
-  height: 10rem;
-  background: url("https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  box-shadow: 20px 20px 60px #111111, -20px -20px 60px #202020;
-  transition: all 0.5s ease-in-out;
-  transform-origin: bottom right;
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
 }
-.image-corousel-img:nth-of-type(3) {
-  position: absolute;
-  z-index: 4;
-  bottom: 2%;
-  right: 5%;
-  width: 15rem;
-  height: 10rem;
-  background: url("https://images.pexels.com/photos/4141962/pexels-photo-4141962.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  box-shadow: 20px 20px 60px #111111, -20px -20px 60px #202020;
-  transition: all 0.5s ease-in-out;
+.slick-track:after {
+  clear: both;
 }
-.image-corousel-img:nth-of-type(4) {
-  position: absolute;
-  z-index: 3;
-  bottom: 2%;
-  right: 0%;
-  width: 15rem;
-  height: 10rem;
-  background: url("https://images.pexels.com/photos/1393996/pexels-photo-1393996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  box-shadow: 20px 20px 60px #111111, -20px -20px 60px #202020;
-  transition: all 0.5s ease-in-out;
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left /* If RTL Make This Right */;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
 }
