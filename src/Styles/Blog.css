@@ -1,4 +1,4 @@
-.blog {
+.Blog {
   min-height: 100vh;
   width: 100%;
 }
@@ -17,23 +17,25 @@
   margin-top: 6rem;
 }
 .blog-text1 {
-  height: 60vh;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .blog-text1-img {
   width: 25%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 80%;
+  height: 48vh;
   margin-left: 5rem;
   background: url("https://images.pexels.com/photos/2710043/pexels-photo-2710043.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+ 
 }
 .blog-text1-img img {
   height: 60vh;
@@ -44,6 +46,7 @@
   margin-left: 2rem;
   height: 80%;
   width: 100%;
+ 
 }
 
 .blog-text1-text h1 {
@@ -91,16 +94,17 @@
   color: white;
 }
 .blog-text2 {
-  height: 60vh;
+  min-height: 60vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  flex-wrap: wrap;
 }
 .blog-text2-img {
   width: 25%;
-  height: 80%;
+  height: 48vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -165,4 +169,23 @@
   border: none;
   background-color: rgb(48, 44, 44);
   color: white;
+}
+
+
+
+@media (max-width:900px)
+{
+
+  .blog-text1-img,.blog-text1-text,.blog-text2-img,.blog-text2-text{
+    flex: 1 1 20rem;
+  }
+
+  .blog-text2-img,.blog-text1-img{
+    margin: auto;
+  }
+
+  .blog-text1,.blog-text2{
+    margin: 1rem 0;
+  }
+
 }

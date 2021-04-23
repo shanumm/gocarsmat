@@ -4,6 +4,8 @@
   background: url("https://images.pexels.com/photos/7674/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-size: cover;
+  flex: 0 0 20rem;
+  margin: 2rem 0;
   background-repeat: no-repeat;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);

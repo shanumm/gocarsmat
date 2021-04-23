@@ -1,5 +1,5 @@
 .navbar {
-  height: 13vh;
+  min-height: 13vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -10,17 +10,18 @@
 }
 
 .navbar > div {
-  height: 13vh;
+  min-height: 13vh;
   list-style: none;
   width: 80%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navbar > div > div {
-  flex: 1;
+  flex: 1 1 10rem;
 }
 
 .navlinks ul {
@@ -31,7 +32,7 @@
 }
 
 .cart {
-  height: 100%;
+  min-height: 13vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -50,4 +51,14 @@
 
 .navlinks ul li:hover {
   background: #a80038;
+}
+
+
+
+
+@media (max-width:800px)
+{
+  .navbar{
+    display: none;
+  }
 }

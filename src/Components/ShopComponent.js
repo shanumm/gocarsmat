@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/shopComponent.css";
-import "react-bootstrap";
+// import "react-bootstrap";
 import { Eye, HeartFill, BarChart } from "react-bootstrap-icons";
 export default function ShopComponent() {
   return (
@@ -14,7 +14,7 @@ export default function ShopComponent() {
             <HeartFill size={20} />
           </div>
           <div>
-            <BarChart size={20}/>
+            <BarChart size={20} />
           </div>
         </div>
       </div>

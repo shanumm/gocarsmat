@@ -1,7 +1,7 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+// import { Carousel } from "react-bootstrap";
 import "../Styles/comments.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 export default function Comments() {
   return (
     <div className="comments">
@@ -11,9 +11,9 @@ export default function Comments() {
           <div className="comment1-quotes"></div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Fugit alias, autem eaque ut pariatur saepe quod quos
-              voluptatum eius error! 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              alias, autem eaque ut pariatur saepe quod quos voluptatum eius
+              error!
             </p>
           </div>
           <div className="comment1-quotes"></div>
@@ -26,9 +26,9 @@ export default function Comments() {
           <div className="comment2-quotes"></div>
           <div>
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Fugit alias, autem eaque ut pariatur saepe quod quos
-              voluptatum eius error!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              alias, autem eaque ut pariatur saepe quod quos voluptatum eius
+              error!
             </p>
           </div>
           <div className="comment2-quotes"></div>

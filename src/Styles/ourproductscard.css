@@ -1,5 +1,5 @@
 .ourproductcards {
-    height: 80vh;
+    min-height: 80vh;
     min-width: 20rem;
     margin: 0 2rem;
     border-radius: 25px;
@@ -8,7 +8,7 @@
   }
   
   .ourproduct-img {
-    height: 40%;
+   min-height: 30vh;
     width: 100%;
     margin: auto;
     border-top-left-radius: 25px;
@@ -63,3 +63,13 @@
     border: none;
     border-radius: 25px;
   }
+
+
+  @media (max-width:900px)
+{
+  .ourproductcards {
+    min-height: 40vh;
+    min-width: 15rem;
+  }
+
+}

@@ -64,7 +64,7 @@ export default function HomeContent() {
       exit={{ opacity: 0 }}
       className="homecontent"
     >
-      <ImageCorousel />
+      {/* <ImageCorousel /> */}
       <Nav />
       <div className="homecontent-heading">
         <div>
@@ -209,8 +209,7 @@ export default function HomeContent() {
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Aspernatur consequatur reiciendis tenetur delectus animi
-              laboriosam!
+              Aspernatur consequatur reiciendis tenetur
             </p>
             <button>Read More</button>
           </div>

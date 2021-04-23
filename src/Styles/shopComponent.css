@@ -72,3 +72,13 @@
 }
 
 
+@media (max-width:900px)
+{
+
+  .shopcomponent{
+    min-height: 40vh;
+    width: 12rem;
+  }
+}
+
+

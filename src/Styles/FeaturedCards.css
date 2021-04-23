@@ -1,14 +1,14 @@
 .featuredcards {
-  height: 80vh;
+  min-height: 80vh;
   min-width: 20rem;
   margin: 0 2rem;
   border-radius: 25px;
   border: 3px solid rgb(43, 43, 43);
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .featured-img {
-  height: 40%;
+  min-height: 30vh;
   width: 100%;
   margin: auto;
   border-top-left-radius: 25px;
@@ -29,37 +29,44 @@
   padding: 0.5rem 0;
   position: relative;
   color: #fbf9fa;
-
 }
 
 .reviews::after,
 .featured-heading::after,
 .featured-text::after,
-.featured-price::after{
-    position:absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: rgba(177, 177, 177,.5);
-
+.featured-price::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(177, 177, 177, 0.5);
 }
 
-
-.featured-button{
+.featured-button {
   width: 50%;
-  margin:auto;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.featured-button button{
-  padding: .6rem 1.5rem;
+.featured-button button {
+  padding: 0.6rem 1.5rem;
   color: white;
   background: rgb(61, 61, 61);
   outline: none;
   border: none;
   border-radius: 25px;
+}
+
+
+@media (max-width:900px)
+{
+  .featuredcards {
+    min-height: 40vh;
+    min-width: 15rem;
+  }
+
 }

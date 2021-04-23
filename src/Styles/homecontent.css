@@ -4,7 +4,7 @@
 }
 
 .homecontent-heading {
-  height: 20vh;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,12 +33,14 @@
 }
 
 .homecontent-content {
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
+  flex-wrap: wrap;
+  
 }
 
 .homecontent-content > div {
-  flex: 1;
+  flex: 1 1 20rem;
 }
 
 .homecontent-img .image {
@@ -48,7 +50,7 @@
   background-size: contain;
   width: 80%;
   margin: auto;
-  height: 100%;
+  height: 90vh;
 }
 
 .homecontent-content-text {
@@ -66,16 +68,17 @@
 }
 
 .home-content-cards {
-  height: 40vh;
+  min-height: 40vh;
   width: 90%;
   display: flex;
   align-items: center;
   margin: auto;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .featured-product-heading {
-  height: 20vh;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,21 +203,22 @@
 
 .newarrivals-bestsellers {
   margin-top: 5rem;
-  height: 40vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  flex-wrap: wrap;
 }
 
 .newarrivals,
 .bestsellers {
-  flex: 1;
+  flex: 1 1 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 40vh;
   background: url("https://cdn.pixabay.com/photo/2021/01/22/20/16/heron-5941013_960_720.jpg");
   background-position: center;
   background-size: cover;
@@ -241,20 +245,22 @@
 }
 
 .additions {
-  height: 30vh;
+  min-height: 30vh;
   width: 80%;
   margin: 4rem auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: white;
+  flex-wrap: wrap;
 }
 
 .additions > div {
   width: 100%;
-  height: 80%;
+  height: 25vh;
   margin: 0 2rem 0 0;
   display: flex;
+  flex: 1 1 10rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -267,9 +273,10 @@
 }
 
 .latest-blog-content {
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   width: 80%;
+  flex-wrap: wrap;
   margin: auto;
   align-items: center;
   justify-content: space-between;
@@ -279,8 +286,10 @@
 .latest-blog1,
 .latest-blog2 {
   width: 40vw;
-  height: 100%;
+  min-height: 50vh;
   display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 20rem;
   align-items: center;
   justify-content: center;
   color: white;
@@ -288,8 +297,8 @@
 
 .latest-blog-image,
 .latest-blog-text {
-  flex: 1;
-  height: 80%;
+  flex: 1 1 20rem;
+  height: 40vh;
   margin: 0 1rem;
 }
 
@@ -390,4 +399,46 @@
   border: none;
   color: white;
   transform: translateX(-101%) rotate(-90deg);
+}
+
+@media (max-width: 900px) {
+  .heading-lines1,
+  .heading-lines2,
+  .heading-lines1::before,
+  .heading-lines1::after,
+  .heading-lines2::before,
+  .heading-lines2::after {
+    display: none;
+  }
+  .scrollbutton {
+    display: none;
+  }
+
+  .subscribe-input input {
+    padding: 0.6rem 5rem;
+  }
+  .subscribe {
+    text-align: center;
+  }
+
+  .additions > div {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+  .homecontent-heading > div {
+    font-size: 2rem;
+  }
+  .homecontent-content {
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .homecontent-img .image{
+    margin-top: 5rem;
+    height: 30vw;
+  }
+  .homecontent-content-text >div{
+    text-align: center;
+    margin: auto;
+  }
 }

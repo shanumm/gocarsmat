@@ -9,10 +9,11 @@
     min-height: 60vh;
     width: 87%;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
   }
   .upper-part1 {
-    flex: 1.8;
+    flex: 1.8 1.8 20rem;
   }
   .upper-part1 h1 {
     font-size: 2rem;
